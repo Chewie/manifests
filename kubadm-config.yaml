@@ -1,8 +1,0 @@
-apiVersion: kubeadm.k8s.io/v1alpha1
-kind: MasterConfiguration
-networking:
-  podSubnet: 192.168.0.0/16
-controllerManagerExtraArgs:
-  address: 0.0.0.0
-schedulerExtraArgs:
-  address: 0.0.0.0
