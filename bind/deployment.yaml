@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bind
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: bind
+  template:
+    metadata:
+      labels:
+        app: bind
+    spec:
+      containers:
+        - name: bind
+          image: internetsystemsconsortium/bind9:9.17
+          volumeMounts:
+            - name: named-conf
+              mountPath: /etc/bind
+            - name: loutretelecomzone
+              mountPath: /var/lib/bind
+      volumes:
+        - name: named-conf
+          configMap:
+            name: named-conf
+        - name: loutretelecomzone
+          configMap:
+            name: loutretelecomzone

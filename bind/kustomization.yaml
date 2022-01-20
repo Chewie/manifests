@@ -1,0 +1,14 @@
+namespace: bind
+commonLabels:
+  app: bind
+resources:
+  - namespace.yaml
+  - deployment.yaml
+  - service.yaml
+configMapGenerator:
+  - name: named-conf
+    files:
+      - named.conf
+  - name: loutretelecomzone
+    files:
+      - db.loutretele.com
