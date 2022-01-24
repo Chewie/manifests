@@ -15,12 +15,12 @@ spec:
   template:
     metadata:
       name: '{{path.basename}}'
-      spec:
-        project: default
-        source:
-          repoUrl: https://github.com/Chewie/manifests.git
-          targetRevision: HEAD
-          path: '{{path}}'
-        destination:
-          server: https://kubernetes.default.svc
-          namespace: '{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoUrl: https://github.com/Chewie/manifests.git
+        targetRevision: HEAD
+        path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{path.basename}}'
