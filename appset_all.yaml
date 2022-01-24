@@ -18,7 +18,7 @@ spec:
     spec:
       project: default
       source:
-        repoUrl: https://github.com/Chewie/manifests.git
+        repoURL: https://github.com/Chewie/manifests.git
         targetRevision: HEAD
         path: '{{path}}'
       destination:
