@@ -10,6 +10,8 @@ spec:
       revision: HEAD
       directories:
         - path: ./*
+        - path: k0s/*
+          exluce: true
   template:
     metadata:
       name: '{{path.basename}}'
