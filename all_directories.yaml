@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: apps
+spec:
+  generators:
+    - git:
+      repoUrl: https://github.com/Chewie/manifests.git
+      revision: HEAD
+      directories:
+        - path: ./*
+  template:
+    metadata:
+      name: '{{path.basename}}'
+      spec:
+        project: default
+        source:
+          repoUrl: https://github.com/Chewie/manifests.git
+          targetRevision: HEAD
+          path: '{{path}}'
+        destination:
+          server: https://kubernetes.default.svc
+          namespace: '{{path.basename}}'
