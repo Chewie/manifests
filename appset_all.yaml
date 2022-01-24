@@ -6,7 +6,7 @@ metadata:
 spec:
   generators:
     - git:
-        repoUrl: https://github.com/Chewie/manifests.git
+        repoURL: https://github.com/Chewie/manifests.git
         revision: HEAD
         directories:
           - path: ./*
