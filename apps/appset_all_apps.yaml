@@ -2,15 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: apps
+  namespace: argocd
 spec:
   generators:
     - git:
         repoURL: https://github.com/Chewie/manifests.git
         revision: HEAD
         directories:
-          - path: ./*
-          - path: k0s/*
-            exclude: true
+        - path: apps/*
   template:
     metadata:
       name: '{{path.basename}}'
