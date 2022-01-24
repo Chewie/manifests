@@ -6,12 +6,12 @@ metadata:
 spec:
   generators:
     - git:
-      repoUrl: https://github.com/Chewie/manifests.git
-      revision: HEAD
-      directories:
-        - path: ./*
-        - path: k0s/*
-          exluce: true
+        repoUrl: https://github.com/Chewie/manifests.git
+        revision: HEAD
+        directories:
+          - path: ./*
+          - path: k0s/*
+            exclude: true
   template:
     metadata:
       name: '{{path.basename}}'
