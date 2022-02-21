@@ -1,0 +1,4 @@
+resources:
+  - https://github.com/prometheus-operator/kube-prometheus.git?ref=v0.10.0
+  - grafana-ingress.yaml
+  - prom-ingress.yaml
