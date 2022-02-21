@@ -1,0 +1,5 @@
+resources:
+  - https://github.com/cert-manager/cert-manager/releases/download/v1.7.1/cert-manager.yaml
+  - clusterissuer-staging.yaml
+  - clusterissuer-prod.yaml
+  - secret-loutretel-tsig.yaml
