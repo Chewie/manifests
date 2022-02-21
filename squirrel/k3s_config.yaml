@@ -1,0 +1,6 @@
+# Move this to /etc/rancher/k3s/config.yaml
+tls-san:
+  - squirrel.loutre.tel
+disable:
+  - traefik
+  - local-storage
