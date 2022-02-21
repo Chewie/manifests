@@ -13,6 +13,8 @@ spec:
   template:
     metadata:
       name: '{{path.basename}}'
+      labels:
+        app-type: addon
     spec:
       project: default
       source:
