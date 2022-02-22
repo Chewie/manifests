@@ -7,11 +7,11 @@ metadata:
     app.kubernetes.io/name: prometheus
     app.kubernetes.io/part-of: kube-prometheus
     app.kubernetes.io/version: 2.32.1
-  name: prometheus-k8s
+  name: prometheus-k8s-cluster
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: prometheus-k8s
+  name: prometheus-k8s-cluster
 subjects:
 - kind: ServiceAccount
   name: prometheus-k8s
