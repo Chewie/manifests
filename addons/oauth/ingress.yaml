@@ -2,13 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
   name: oauth2-proxy
   namespace: oauth2-proxy
 spec:
   ingressClassName: nginx
   rules:
-  - host: sso.squirrel.loutre.tel
+  - host: sso.loutre.tel
     http:
       paths:
       - path: /
@@ -20,5 +19,4 @@ spec:
               number: 4180
   tls:
   - hosts:
-    - sso.squirrel.loutre.tel
-    secretName: sso-tls
+    - sso.loutre.tel

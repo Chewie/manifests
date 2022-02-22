@@ -3,3 +3,4 @@ resources:
   - clusterissuer-staging.yaml
   - clusterissuer-prod.yaml
   - secret-loutretel-tsig.yaml
+  - wildcard-certificate.yaml

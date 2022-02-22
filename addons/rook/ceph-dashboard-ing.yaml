@@ -2,17 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
   name: rook-ceph-mgr-dashboard
   namespace: rook-ceph
 spec:
   ingressClassName: nginx
-  tls:
-    - hosts:
-      - ceph.squirrel.loutre.tel
-      secretName: ceph-tls
   rules:
-  - host: ceph.squirrel.loutre.tel
+  - host: ceph.loutre.tel
     http:
       paths:
       - backend:
