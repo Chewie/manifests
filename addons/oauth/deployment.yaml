@@ -22,8 +22,8 @@ spec:
         - --email-domain=*
         - --upstream=file:///dev/null
         - --http-address=0.0.0.0:4180
-        - --cookie-domain=.squirrel.loutre.tel
-        - --whitelist-domain=.squirrel.loutre.tel
+        - --cookie-domain=.loutre.tel
+        - --whitelist-domain=.loutre.tel
         env:
         - name: OAUTH2_PROXY_CLIENT_ID
           valueFrom:
