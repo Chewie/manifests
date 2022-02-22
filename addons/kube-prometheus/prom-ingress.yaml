@@ -2,8 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    nginx.ingress.kubernetes.io/auth-url: "https://sso.squirrel.loutre.tel/oauth2/auth"
-    nginx.ingress.kubernetes.io/auth-signin: "https://sso.squirrel.loutre.tel/oauth2/start?rd=https://$host$escaped_request_uri"
+    #nginx.ingress.kubernetes.io/auth-url: "https://sso.squirrel.loutre.tel/oauth2/auth"
+    #nginx.ingress.kubernetes.io/auth-signin: "https://sso.squirrel.loutre.tel/oauth2/start?rd=https://$host$escaped_request_uri"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
   name: prometheus
   namespace: monitoring
