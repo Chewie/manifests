@@ -1,0 +1,7 @@
+resources:
+  - https://raw.githubusercontent.com/rook/rook/v1.8.5/deploy/examples/crds.yaml
+  - https://raw.githubusercontent.com/rook/rook/v1.8.5/deploy/examples/common.yaml
+  - https://raw.githubusercontent.com/rook/rook/v1.8.5/deploy/examples/operator.yaml
+  - https://raw.githubusercontent.com/rook/rook/release-1.8/deploy/examples/monitoring/rbac.yaml
+  - single-node-cluster.yaml
+  - ceph-dashboard-ing.yaml
