@@ -1,6 +1,6 @@
 resources:
   - https://github.com/prometheus-operator/kube-prometheus.git?ref=v0.10.0
   - prometheus-clusterrole.yaml
-  - prometheus-clusterrolebinding.yaml.yaml
+  - prometheus-clusterrolebinding.yaml
   - grafana-ingress.yaml
   - prom-ingress.yaml
