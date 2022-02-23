@@ -5,4 +5,5 @@ resources:
   - https://raw.githubusercontent.com/rook/rook/release-1.8/deploy/examples/monitoring/rbac.yaml
   - https://raw.githubusercontent.com/rook/rook/v1.8.5/deploy/examples/monitoring/service-monitor.yaml
   - single-node-cluster.yaml
+  - single-node-storageClass.yaml
   - ceph-dashboard-ing.yaml
