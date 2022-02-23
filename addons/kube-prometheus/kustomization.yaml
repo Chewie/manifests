@@ -6,6 +6,8 @@ resources:
   - prometheus-clusterrolebinding.yaml
   - loki-stack.yaml # generated from helm template grafana/loki-stack
   - loki-ingress.yaml
+  - grafana-storage-pvc.yaml
+  - loki-storage-pvc.yaml
 
 # actually not that secret, so no need to seal it
 secretGenerator:
@@ -14,3 +16,9 @@ secretGenerator:
     behavior: replace
     files:
       - grafana-datasources.yaml
+
+patches:
+  - path: patches/grafana-deployment.yaml
+    target:
+      name: grafana
+      kind: Deployment

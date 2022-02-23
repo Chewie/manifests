@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+  namespace: monitoring
+spec:
+  template:
+    spec:
+      volumes:
+      - name: grafana-storage
+        emptyDir: null # Remove that field from the base
+        persistentVolumeClaim:
+          claimName: grafana-storage

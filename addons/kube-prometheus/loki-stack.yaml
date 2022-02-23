@@ -729,4 +729,5 @@ spec:
           secret:
             secretName: loki
         - name: storage
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: loki-storage
